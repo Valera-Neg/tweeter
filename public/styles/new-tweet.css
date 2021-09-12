@@ -1,0 +1,25 @@
+textarea {
+  background-color: #f4f1ec;
+  width: 100%;
+  outline: none;
+  border: none;
+  border-bottom: 4px solid rgb(70, 65, 65);
+}
+
+
+textarea {
+  font-weight: bolder;
+  }
+
+
+.batton-container {
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Bungee', cursive
+}
+
+
+.batton {
+  color: white ;
+  background-color: #4056A1;
+}
