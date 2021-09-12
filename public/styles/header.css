@@ -1,0 +1,39 @@
+.profile-bold {
+  font-size: xx-large;
+}
+
+.name {
+  display: flex;
+  justify-content: center;
+}
+
+
+
+
+.container-user {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /*background-color: #cf891f;*/
+  
+}
+
+header{
+  background-color: #cf891f;
+  height: 400px;
+  width: 100%;
+  position: relative;
+}
+
+.profile {
+  display: flex;
+  justify-content: center;
+  position: relative;
+ 
+}
+
+.bold {
+  font:bold;
+}
+
