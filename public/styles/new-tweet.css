@@ -7,20 +7,15 @@ textarea {
   font-weight: bolder;
 }
 
-/*
-textarea {
-  font-weight: bolder;
-  }
-*/
-
-.batton-container {
+.button-container {
   display: flex;
   justify-content: space-between;
   font-family: 'Bungee', cursive
 }
 
 
-.batton {
+.button {
   color: white ;
   background-color: #4056A1;
 }
+

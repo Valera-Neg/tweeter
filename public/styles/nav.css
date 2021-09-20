@@ -3,7 +3,7 @@
   display: flex;
   justify-content: space-between;
   height: 100%;
- 
+  
 }
 
 .container-btn {
@@ -13,8 +13,6 @@
 }
 
 nav {
- /*position: absolute;*/ 
-
   padding-left: 1.5rem;
   padding-right: 1.5rem;
   background-color: #4056A1;
@@ -37,3 +35,12 @@ i {
   font-size: 2rem;
   align-self: flex-end;
 }
+
+.fixed{
+  overflow:hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+
