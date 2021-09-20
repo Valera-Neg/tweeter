@@ -92,10 +92,9 @@ $(function() {
     dataType: "json",
     success: (tweets) => {
       console.log(tweets);
-      
       renderTweets(tweets);
-      $container =  $('.created-tweets');
-      $container.append($tweets);
+      //$container =  $('.created-tweets');
+      //$container.append($tweets);
 
     },
     error : (error) => {
@@ -104,23 +103,62 @@ $(function() {
   })
   loadTweets();
 
- /**TAKE IMPUT FROM USER AND RENDER IN NEW TWEETS****/
-  const form = $('#submit-tweet');
-  form.on('submit', function(event) {
-  event.preventDefault();
-  const serializedData = $(this).serialize();
-  console.log(serializedData);
-//$.post('/tweets', serializedData, () => {}, () => {})
-$.post('/tweets', serializedData).then( (resp) => {
-  console.log(resp);
-  loadTweets();
-});
+      /**TAKE IMPUT FROM USER AND RENDER IN NEW TWEETS****/
+      const form = $('#submit-tweet');
+      form.on('submit', function(event) {
+      event.preventDefault();
+      console.log(checkCounter());
+      if($('#tweet-text').val() === '' || $('#tweet-text').val() === undefined) {
+        alert('Textbox is empty!')
+        return;
+      } else if (!checkCounter()) {
+        alert('message is too long')
+        return;
+      }
+      const serializedData = $(this).serialize();
+      console.log(serializedData);
+       
+      // console.log($('#tweet-text').val());
+      // if($('#tweet-text').val() === undefined || $('#tweet-text').val() === null) {
+      //     alert('Textbox is empty!')
+     
+      // }
+
+      // event.preventDefault();
+      // const serializedData = $(this).serialize();
+      // console.log(serializedData);
+
+        
+     // $.post('/tweets', serializedData, () => {}, () => {})
+      $.post('/tweets', serializedData).then( (resp) => {
+      console.log(resp);
+      loadTweets();
+    });
+  });
+
+  function checkCounter() {
+    return 0 <= parseInt($('#message-counter').html());
+  }
 
 
-});
 
+  // /**JQUERY VALIDATION FORM****/
+  // const $checkForm = $('#submit-tweet')
+  // if($checkForm.length) {
+  //   $checkForm.validate({
+  //     rules:{
+  //       text:{
+  //         required: true
+  //       }
 
-
+  //     },
+  //     messages:{
+  //       text:{
+  //         required: 'Please add some text'
+  //       }
+  //     }
+  //   })
+  // }
 
 
 
