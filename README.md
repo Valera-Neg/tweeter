@@ -5,9 +5,9 @@ The Tweeter is a simple, single-page Twitter clone, which was created using HTML
 ## Final Product
 
 
-- [desc top image](public\images\Tweeter01.png)<br>
-- [smartphone design image](public\images\Tweeter03.png)<br>
-- [smartphone design image](public\images\Tweeter04.png)<br>
+- ![desc top image](public\images\tweetwe06.png)<br>
+- ![smartphone design image](public\images\Tweeter04.png)<br>
+- ![smartphone design image](public\images\tweetwe05.png)<br>
 
 
 ## Getting Started
