@@ -36,4 +36,60 @@ body {
    margin: auto;
    width: 90%;
    background-color: #f4f1ec;
- }
+  }
+
+ .heder-article-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 10%;
+  padding: 1.5em;
+}
+
+ 
+.image-container {
+  width: 70%;
+  height: 120%;
+  margin:0;
+}
+
+#main-container {
+  width: 100%;
+  padding: 2em;
+}
+
+
+ @media only screen and (max-width: 1156px) {
+
+   .heder-article-container {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+  }
+
+   .image-container {
+    background-color: #eca335;
+    width: 100%;
+  }  
+
+
+   #main-container {
+     margin: auto;
+  }
+
+  .fixed {
+    background-color: #eca335;
+  }
+
+  .main-hader {
+    margin-top: 0;
+  }
+
+  .container-user {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+
+
+ 

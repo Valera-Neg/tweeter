@@ -1,9 +1,7 @@
 .container-nav {
-  
   display: flex;
   justify-content: space-between;
   height: 100%;
-  
 }
 
 .container-btn {
@@ -17,7 +15,7 @@ nav {
   padding-right: 1.5rem;
   background-color: #4056A1;
   height: 120px;
-  border-radius: 0.2em;
+  border-radius: 0.5em;
   color: #FFFF;
  }
 

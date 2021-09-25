@@ -1,11 +1,11 @@
 textarea {
-  
   background-color: #f4f1ec;
   width: 100%;
   outline: none;
   border: none;
   border-bottom: 4px solid rgb(70, 65, 65);
   font-weight: bolder;
+  padding-right: 1.5em;
 }
 
 .button-container {
@@ -14,9 +14,36 @@ textarea {
   font-family: 'Bungee', cursive
 }
 
-
 .button {
   color: white ;
   background-color: #4056A1;
 }
 
+.too-long {
+  background-color: whitesmoke;
+  border:solid crimson 4px;
+  color: crimson;
+  font: bold;
+  font-size: larger;
+  font: bold;
+  padding: 1.5em;
+  margin: 1em;
+  display: none;
+}
+
+.box-empty {
+  background-color:whitesmoke;
+  border:solid crimson 4px;
+  color: crimson;
+  font: bold;
+  font-size: larger;
+  font: bold;
+  padding: 1.3em;
+  margin: 1em;
+  display: none;
+}
+
+.warnings {
+  display: flex;
+  justify-content: center;
+}

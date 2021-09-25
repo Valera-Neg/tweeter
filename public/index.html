@@ -42,7 +42,7 @@
     <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
   </head>
  
-  <body>
+<body>
     <!-- <header> -->
     <!--Top nav bar (fixed) -->
     <nav class="fixed">
@@ -58,35 +58,45 @@
       </div>
     </nav> 
     <!-- User Profile -->
-    <header class="main-header">
-  <div class="container-user">
-      <div class="profile">
-        <img class="profile-image" src="/images/profile-hex.png">
-      </div>
+    <div class="heder-article-container">
+      <div class= "image-container">
+        <header class="main-header">
+    
+            <div class="container-user">
+    
+                  <div class="profile">
+                    <img class="profile-image" src="/images/profile-hex.png">
+                  </div>
+                  <br>
+                  <div class="name">
+                    <span class="profile-bold"><strong>Amy</strong> Mansell</span>
+                  </div>
+    
+            </div>
+          </header>
+        </div>
+  <!-- Page-specific <h2>Compose Tweet</h2> ( main) content here -->
+  <main id="main-container" class="container">
+    <div class="warnings">
+      <span class="too-long"><strong>⛔Too long. Plz rspct our arbitrary limit 140 chars❗⛔</strong></span>
+      <span class="box-empty"><strong>⛔Textbox is empty!❗⛔</strong></span>
       <br>
-      <div class="name">
-        <span class="profile-bold"><strong>Your</strong> Name</span>
-      </div>
     </div>
-  </header>
-    <!-- Page-specific <h2>Compose Tweet</h2> ( main) content here -->
-    <main id="main-container" class="container">
       <section class="new-tweet">
-        <br>
-         
+      <br>
         <form id="submit-tweet" action="/tweets" method="POST">
-          <!-- <label for="tweet-text">What are you humming about?</label> -->
           <textarea  name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
             <br>
-          <div class="button-container"> 
-            <button class="button" type="submit" >Tweet</button>
-            <output id="message-counter" name="counter" class="counter" for="tweet-text">140</output>
-          </div>
-        </form>
+              <div class="button-container"> 
+                <button class="button" type="submit" >Tweet</button>
+                <output id="message-counter" name="counter" class="counter" for="tweet-text">140</output>
+              </div>
+          </form>
       </section>
       <section class="created-tweets">
      
-    </section>
+      </section>
     </main>
+    </div>
   </body>
 </html>

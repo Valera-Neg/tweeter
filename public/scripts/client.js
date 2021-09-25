@@ -3,49 +3,20 @@
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
-/*
-const data = [
-  {
-    "user": {
-      "name": "Newton",
-      "avatars": "https://i.imgur.com/73hZDYK.png"
-      ,
-      "handle": "@SirIsaac"
-    },
-    "content": {
-      "text": "If I have seen further it is by standing on the shoulders of giants"
-    },
-    "created_at":1631736447449
-  },
-  {
-    "user": {
-      "name": "Descartes",
-      "avatars": "https://i.imgur.com/nlhLi3I.png",
-      "handle": "@rd" },
-    "content": {
-      "text": "Je pense , donc je suis"
-    },
-    "created_at": 1631822847449
-  }
-]*/
-
 $(function() {
 
     /**RENDERING ALL TWEETS****/
-    const renderTweets = function(data) {
-      $('.created-tweets').empty();
-      data.forEach((tweet) => {
-        const $tempData = createTweetElement(tweet);
-        
-        $('.created-tweets').prepend($tempData);
-      });
-      return $(this);
-    };
-/**RENDERING ONE TWEET****/
+  const renderTweets = function(data) {
+    $('.created-tweets').empty();
+    data.forEach((tweet) => {
+      const $tempData = createTweetElement(tweet);
+      $('.created-tweets').prepend($tempData);
+    });
+    return $(this);
+  };
+/**RENDERING SINGLE TWEET****/
   const createTweetElement = function(dataObj) { 
-  const $tweet = $(
- 
-  `
+  const $tweet = $(`
   <div id="tweet-container">
   <div class="user-info">
   <div class="info-container">
@@ -91,16 +62,12 @@ $(function() {
     metod:'GET',
     dataType: "json",
     success: (tweets) => {
-      console.log(tweets);
-      renderTweets(tweets);
-      //$container =  $('.created-tweets');
-      //$container.append($tweets);
-
-    },
+     renderTweets(tweets);
+     },
     error : (error) => {
       console.log(error);
     }
-  })
+  });
   loadTweets();
 
       /**TAKE IMPUT FROM USER AND RENDER IN NEW TWEETS****/
@@ -108,58 +75,34 @@ $(function() {
       form.on('submit', function(event) {
       event.preventDefault();
       console.log(checkCounter());
+
+      /**DISPLAY WARNING MESSAGES****/
       if($('#tweet-text').val() === '' || $('#tweet-text').val() === undefined) {
-        alert('Textbox is empty!')
+        $('.box-empty').slideDown();
+        $('.too-long').slideup();
         return;
       } else if (!checkCounter()) {
-        alert('message is too long')
+        $('.box-empty').slideUp();
+        $('.too-long').slideDown();
+       
         return;
-      }
+      } else {
+        $('.box-empty').slideUp();
+        $('.too-long').slideUp();
+      };
       const serializedData = $(this).serialize();
       console.log(serializedData);
        
-      // console.log($('#tweet-text').val());
-      // if($('#tweet-text').val() === undefined || $('#tweet-text').val() === null) {
-      //     alert('Textbox is empty!')
      
-      // }
 
-      // event.preventDefault();
-      // const serializedData = $(this).serialize();
-      // console.log(serializedData);
-
-        
-     // $.post('/tweets', serializedData, () => {}, () => {})
       $.post('/tweets', serializedData).then( (resp) => {
-      console.log(resp);
+      $('#tweet-text').val("");
       loadTweets();
     });
   });
 
   function checkCounter() {
     return 0 <= parseInt($('#message-counter').html());
-  }
-
-
-
-  // /**JQUERY VALIDATION FORM****/
-  // const $checkForm = $('#submit-tweet')
-  // if($checkForm.length) {
-  //   $checkForm.validate({
-  //     rules:{
-  //       text:{
-  //         required: true
-  //       }
-
-  //     },
-  //     messages:{
-  //       text:{
-  //         required: 'Please add some text'
-  //       }
-  //     }
-  //   })
-  // }
-
-
+  };
 
 });
