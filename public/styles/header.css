@@ -33,4 +33,25 @@
 .bold {
   font:bold;
 }
+.fa-angle-double-up{
+  color: #ffffff;
+}
+
+#scrollUp:hover{ 
+  box-shadow: 4px 4px 8px  #4056A1;
+  background:#eca335;
+}
+
+#scrollUp{
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  background:crimson;
+  /* border:none; */
+  outline: none;
+  cursor: pointer;
+}
 

@@ -57,6 +57,11 @@ body {
   padding: 2em;
 }
 
+#doble-arrow{
+  background: #4056A1;
+  border: none;
+}
+
 
  @media only screen and (max-width: 1156px) {
 
@@ -66,12 +71,17 @@ body {
     padding: 0;
   }
 
+
+
    .image-container {
     background-color: #eca335;
     width: 100%;
   }  
 
-
+  #doble-arrow{
+  background: #eca335;
+  border: none;
+}
    #main-container {
      margin: auto;
   }

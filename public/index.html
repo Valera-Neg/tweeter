@@ -1,102 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Meta Information -->
-    <meta charset="UTF-8">
-    <title>Tweeter - Home Page</title>
-    <!--Time-Ago-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js" integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    
-    <!--JQuery-->
-    <script
-    src="https://code.jquery.com/jquery-3.6.0.min.js"
-    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-    crossorigin="anonymous"></script>
 
-    <!-- External CSS -->
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
-    
-     <!--External Fonts-->
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
+<head>
+  <!-- Meta Information -->
+  <meta charset="UTF-8">
+  <title>Tweeter - Home Page</title>
+  <!--Time-Ago-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js"
+    integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@1,300;1,600&display=swap" rel="stylesheet">
+  <!--JQuery-->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
-    <!--Font Awesome-->
-    <script src="https://kit.fontawesome.com/c98bed01e0.js" crossorigin="anonymous"></script>
+  <!-- External CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    type="text/css" />
 
-    <!-- App CSS -->
-    <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
-    <link rel="stylesheet" href="styles/nav.css"/>
-    <link rel="stylesheet" href="styles/header.css">
-    <link rel="stylesheet" href="styles/new-tweet.css"/>
-    <link rel="stylesheet" href="styles/tweet-section.css"/>
+  <!--External Fonts-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
 
-    <!-- External JS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- App JS -->
-    <script type="text/javascript" src="/scripts/client.js"></script>
-    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
-  </head>
- 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@1,300;1,600&display=swap"
+    rel="stylesheet">
+
+  <!-- Material-design-icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!--Font Awesome-->
+  <script src="https://kit.fontawesome.com/c98bed01e0.js" crossorigin="anonymous"></script>
+
+  <!-- App CSS -->
+  <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+  <link rel="stylesheet" href="styles/nav.css" />
+  <link rel="stylesheet" href="styles/header.css">
+  <link rel="stylesheet" href="styles/new-tweet.css" />
+  <link rel="stylesheet" href="styles/tweet-section.css" />
+
+  <!-- External JS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- App JS -->
+  <script type="text/javascript" src="/scripts/client.js"></script>
+  <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+</head>
+
 <body>
-    <!-- <header> -->
-    <!--Top nav bar (fixed) -->
-    <nav class="fixed">
-      <div class="container-nav">
-        
-          <span class="nav-text">Tweeter</span>
-          <div class="container-btn">
-            <span class="bold block"><strong>Write</strong> a new tweet</span>
-            
-            <i class="fas fa-angle-double-down block"></i>
-          </div>
-       
+
+  <!-- <header> -->
+  <!--Top nav bar (fixed) -->
+  <nav class="fixed">
+    <div class="container-nav">
+
+      <span class="nav-text">Tweeter</span>
+      <div class="container-btn">
+        <span class="bold block"><strong>Write</strong> a new tweet</span>
+
+        <button id="doble-arrow">
+        <i class="fas fa-angle-double-down block"></i>
+      </button>
+
+      <script>
+        // move page in the begining smooth
+      const buttonScrollToTop = document.querySelector("#doble-arrow");   
+        buttonScrollToTop.addEventListener("click", function () {      
+          window.scrollTo({
+            top: 0,
+            left: 0,
+            behavior:"smooth"
+          });
+        });
+       </script>
+
       </div>
-    </nav> 
-    <!-- User Profile -->
-    <div class="heder-article-container">
-      <div class= "image-container">
-        <header class="main-header">
-    
-            <div class="container-user">
-    
-                  <div class="profile">
-                    <img class="profile-image" src="/images/profile-hex.png">
-                  </div>
-                  <br>
-                  <div class="name">
-                    <span class="profile-bold"><strong>Amy</strong> Mansell</span>
-                  </div>
-    
-            </div>
-          </header>
-        </div>
-  <!-- Page-specific <h2>Compose Tweet</h2> ( main) content here -->
-  <main id="main-container" class="container">
-    <div class="warnings">
-      <span class="too-long"><strong>⛔Too long. Plz rspct our arbitrary limit 140 chars❗⛔</strong></span>
-      <span class="box-empty"><strong>⛔Textbox is empty!❗⛔</strong></span>
-      <br>
     </div>
+  </nav>
+  <!-- User Profile -->
+  <div class="heder-article-container">
+    <div class="image-container">
+      <header class="main-header">
+
+        <div class="container-user">
+
+          <div class="profile">
+            <img class="profile-image" src="/images/profile-hex.png">
+          </div>
+          <br>
+          <div class="name">
+            <span class="profile-bold"><strong>Amy</strong> Mansell</span>
+          </div>
+
+        </div>
+      </header>
+
+    </div>
+
+    <!-- Page-specific <h2>Compose Tweet</h2> ( main) content here -->
+    <main id="main-container" class="container">
+
+      <div class="warnings">
+        <span class="too-long"><strong>⛔Too long. Plz rspct our arbitrary limit 140 chars❗⛔</strong></span>
+        <span class="box-empty"><strong>⛔Textbox is empty!❗⛔</strong></span>
+        <br>
+      </div>
       <section class="new-tweet">
-      <br>
+        <br>
         <form id="submit-tweet" action="/tweets" method="POST">
-          <textarea  name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
-            <br>
-              <div class="button-container"> 
-                <button class="button" type="submit" >Tweet</button>
-                <output id="message-counter" name="counter" class="counter" for="tweet-text">140</output>
-              </div>
-          </form>
+          <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
+          <script>
+            // Puts cursor in textatea
+            const dobleArrovClick = document.querySelector('#doble-arrow');
+              dobleArrovClick.addEventListener('click', function() {
+                var varInpBox = document.getElementById('tweet-text'); 
+                varInpBox.focus;  
+                varInpBox.setActive; 
+                varInpBox.select();  
+              })
+            </script>
+          <br>
+          <div class="button-container">
+            <button class="button" type="submit">Tweet</button>
+            <output id="message-counter" name="counter" class="counter" for="tweet-text">140</output>
+          </div>
+        </form>
       </section>
       <section class="created-tweets">
-     
       </section>
     </main>
-    </div>
-  </body>
+  </div>
+
+  <button id="scrollUp">
+    <i class="fas fa-angle-double-up"></i>
+  </button>
+  <script>
+    //  positioning page in begining
+    const buttonScrollTo = document.querySelector("#scrollUp");
+    buttonScrollTo.addEventListener("click", function () {
+      window.scrollTo(0, 0);
+    });
+  </script> 
+</body>
 </html>

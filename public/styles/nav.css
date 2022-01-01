@@ -41,4 +41,19 @@ i {
   width: 100%;
 }
 
+#doble-arrow{
+  border: none;
+} 
+
+.fa-angle-double-down{
+ animation: move 2s infinite;
+ position: relative;
+}
+@keyframes move{
+  0%{top:0px;}
+  50%{top:15px;}
+  100%{top:0px;}
+}
+
+
 
