@@ -139,10 +139,33 @@
   </button>
   <script>
     //  positioning page in begining
-    const buttonScrollTo = document.querySelector("#scrollUp");
-    buttonScrollTo.addEventListener("click", function () {
-      window.scrollTo(0, 0);
-    });
+    // const buttonScrollTo = document.querySelector("#scrollUp");
+    // buttonScrollTo.addEventListener("click", function () {
+    //   window.scrollTo(0, 0)
+    // });
+
+
+
+    const scrollBtn = document.querySelector('#scrollUp');
+
+    const refreshButtonVisibility = () => {
+      if (document.documentElement.scrollTop <= 150) {
+        scrollBtn.style.display = 'none';
+      } else {
+        scrollBtn.style.display = 'block';
+      }
+    };
+    refreshButtonVisibility();
+
+    scrollBtn.addEventListener('click', () => {
+      document.documentElement.scrollTop = 0;
+    })
+
+    document.addEventListener('scroll', (e) => {
+      refreshButtonVisibility();
+    })
+
+ 
   </script> 
 </body>
 </html>
